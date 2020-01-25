@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS DibsOnDinnerPhotos;
+
 CREATE DATABASE DibsOnDinnerPhotos;
 
 USE DibsOnDinnerPhotos;
