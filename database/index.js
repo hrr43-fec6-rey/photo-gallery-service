@@ -11,7 +11,6 @@ db.connect(
 );
 
 module.exports = db;
-// {id: id}
 
 module.exports = {
   gather: (restId, callback) => {
