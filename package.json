@@ -7,6 +7,7 @@
     "test": "test",
     "start": "nodemon ./server/index.js",
     "build": "webpack --config webpack.config.js --watch",
+    "connect": "mysql -u root",
     "seed": "node ./database/seed.js"
   },
   "repository": {
@@ -33,6 +34,12 @@
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
