@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-const db = require('../database/index.js');
+const db = require('../database/models.js');
 
 app.use(express.static('./public'));
 

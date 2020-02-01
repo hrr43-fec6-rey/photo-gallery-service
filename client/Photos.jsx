@@ -28,14 +28,20 @@ function Photos({ photos }) {
   const photoList = photos.map((photo, index) => {
     if (index < 9) {
       return (
-        <img
+        <div
+          role="button"
+          tabIndex="0"
           onClick={handleClick.bind(this, index)}
-          title="Restaurant, City, State"
-          className={'img ' + classList[index]}
-          key={photo.id}
-          src={photo.image}
-          alt="Smiley face"
-        />
+          onKeyPress={handleClick.bind(this, index)}
+        >
+          <img
+            title="Restaurant, City, State"
+            className={`img ${classList[index]}`}
+            key={photo.id}
+            src={photo.image}
+            alt="Smiley face"
+          />
+        </div>
       );
     }
     return null;
@@ -48,12 +54,16 @@ function Photos({ photos }) {
   return (
     <div className="flex-container">
       {photoList}
-      <div className={'show-picture' + (showPicture ? '' : ' hide-picture')}>
+      <div className={`show-picture' + ${(showPicture ? '' : ' hide-picture')}`}>
         <div
-          id="left-arrow" className={selectedPicture === 0 ? 'disabled' :''}
+          id="left-arrow"
+          className={selectedPicture === 0 ? 'disabled' : ''}
           onClick={prevPhoto}
+          onKeyDown={prevPhoto}
+          role="button"
+          tabIndex="0"
         >
-          >
+          &gt;
         </div>
         <img className="img4" src={photos[selectedPicture].image} alt="hello" />
         <div class="footer">
@@ -66,7 +76,7 @@ function Photos({ photos }) {
           <div class="diner-text">
             <div>
               <strong>
-              OpenTable Diner
+                OpenTable Diner
               </strong>
             </div>
             <div class="dined-on">
@@ -76,16 +86,22 @@ function Photos({ photos }) {
         </div>
         <div
           id="right-arrow"
-          className={selectedPicture === 17 ? 'disabled' :''}
+          role="button"
+          tabIndex="0"
+          className={selectedPicture === 17 ? 'disabled' : ''}
           onClick={nextPhoto}
+          onKeyUp={nextPhoto}
         >
-          >
+          &gt;
         </div>
         <div
           id="close-picture"
           onClick={closePhoto}
+          onKeyPress={closePhoto}
+          role="button"
+          tabIndex="-1"
         >
-          X
+          x
         </div>
       </div>
     </div>
