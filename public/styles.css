@@ -1,0 +1,139 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 200px;
+  align-content: flex-start;
+}
+
+.img {
+  padding: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.img1 {
+  width: 100px;
+  height: 100px;
+}
+
+.img2 {
+  width: 200px;
+  height: 200px;
+}
+
+.img3 {
+  width: 66.66px;
+  height: 66.66px;
+}
+
+.img4 {
+  width: 300px;
+  height: 300px;
+}
+
+.circle-image {
+  float: left;
+}
+
+
+.show-picture {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.86);
+  align-items: center;
+  justify-content: center;
+}
+
+.hide-picture {
+  display: none;
+}
+
+.footer {
+  float: left;
+  margin: 0 8px 0 0;
+  bottom: 0;
+  position: fixed;
+  width: 35%;
+  height: 180px;
+}
+
+.diner-text {
+  color: #ffff;
+  font-family: Arial;
+  margin-left: 3.5em;
+  padding-top: .5em;
+}
+
+.dined-on {
+  padding-top: .3em;
+}
+
+text {
+  display: block;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+#close-picture {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  cursor: pointer;
+  font-size: 20px;
+  color: #91949a;
+  padding: 25px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+
+#right-arrow {
+  top: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  color: #91949a;
+  font-size: 1.2rem;
+  font-family: icons;
+  font-weight: 700;
+  display: inline-block;
+  align-items: flex-start;
+  text-align: center;
+  padding: 1px 50px 2px;
+
+}
+
+#left-arrow {
+  top: 50%;
+  left: 0;
+  cursor: pointer;
+  font-size: 20px;
+  color: #91949a;
+  font-family: icons;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 1.2rem;
+  transform: rotate(180deg);
+  display: inline-block;
+  justify-content: space-between;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 1px 50px 2px;
+
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}
+
+@media only screen and (max-width: 25em), only screen and (max-width: 40em) and (min-width: 25.0625em) {
+  .flex-container {
+    height: 100%;
+  }
+}
