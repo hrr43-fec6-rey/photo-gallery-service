@@ -4,7 +4,7 @@
   "description": "photo gallery for food reservation app",
   "main": "client/index.jsx",
   "scripts": {
-    "test": "test",
+    "test": "jest --detectOpenHandles",
     "start": "nodemon ./server/index.js",
     "build": "webpack --config webpack.config.js --watch",
     "connect": "mysql -u root",
@@ -28,7 +28,8 @@
     "nodemon": "^2.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
@@ -41,6 +42,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "^25.1.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
