@@ -52,59 +52,61 @@ function Photos({ photos }) {
 
   return (
     <div className="pictures">
-    <div className="flex-container">
-      {photoList}
-      <div className={'show-picture' + (showPicture ? '' : ' hide-picture')}>
-        <div
-          id="left-arrow"
-          className={selectedPicture === 0 ? 'disabled' : ''}
-          onClick={prevPhoto}
-          onKeyDown={prevPhoto}
-          role="button"
-          tabIndex="0"
-        >
-          &gt;
-        </div>
-        <img className="img4" src={photos[selectedPicture].image} alt="hello" />
-        <div class="footer">
-          <div class="circle-image">
-            <svg height="50" width="50">
-              <circle cx="25" cy="25" fill="#56D7D9" r="25" />
-              <text dy="10%" fill="white" font-family="Arial" font-size="15px" text-anchor="middle" x="50%" y="50%">OT</text>
-            </svg>
+      <div className="flex-container">
+        {photoList}
+        <div className={'show-picture' + (showPicture ? '' : ' hide-picture')}>
+          <div
+            id="left-arrow"
+            className={selectedPicture === 0 ? 'disabled' : ''}
+            onClick={prevPhoto}
+            onKeyDown={prevPhoto}
+            role="button"
+            tabIndex="0"
+          >
+            &gt;
           </div>
-          <div class="diner-text">
-            <div>
-              <strong>
-                OpenTable Diner
-              </strong>
-            </div>
-            <div class="dined-on">
-              Dined on January 31, 2020
+          <div>
+            <img className="img4" src={photos[selectedPicture].image} alt="hello" />
+            <div class="footer">
+              <div class="circle-image">
+                <svg height="50" width="50">
+                  <circle cx="25" cy="25" fill="#56D7D9" r="25" />
+                  <text dy="10%" fill="white" font-family="Arial" font-size="15px" text-anchor="middle" x="50%" y="50%">OT</text>
+                </svg>
+              </div>
+              <div class="diner-text">
+                <div>
+                  <strong>
+                  OpenTable Diner
+                  </strong>
+                </div>
+                <div class="dined-on">
+                Dined on January 31, 2020
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          id="right-arrow"
-          role="button"
-          tabIndex="0"
-          className={selectedPicture === photos.length - 1 ? 'disabled' : ''}
-          onClick={nextPhoto}
-          onKeyUp={nextPhoto}
-        >
-          &gt;
-        </div>
-        <div
-          id="close-picture"
-          onClick={closePhoto}
-          onKeyPress={closePhoto}
-          role="button"
-          tabIndex="-1"
-        >
-          x
+          <div
+            id="right-arrow"
+            role="button"
+            tabIndex="0"
+            className={selectedPicture === photos.length - 1 ? 'disabled' : ''}
+            onClick={nextPhoto}
+            onKeyUp={nextPhoto}
+          >
+            &gt;
+          </div>
+          <div
+            id="close-picture"
+            onClick={closePhoto}
+            onKeyPress={closePhoto}
+            role="button"
+            tabIndex="-1"
+          >
+            x
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
