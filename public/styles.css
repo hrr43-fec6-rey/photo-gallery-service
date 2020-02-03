@@ -39,8 +39,8 @@
 }
 
 .img4 {
-  width: 50%;
-  height: 50%;
+  width: 300px;
+  height: 300px;
 }
 
 .circle-image {
@@ -143,3 +143,4 @@ text {
   cursor: default;
   opacity: 0.6;
 }
+
