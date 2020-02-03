@@ -87,7 +87,7 @@ function Photos({ photos }) {
           id="right-arrow"
           role="button"
           tabIndex="0"
-          className={selectedPicture === 17 ? 'disabled' : ''}
+          className={selectedPicture === photos.length - 1 ? 'disabled' : ''}
           onClick={nextPhoto}
           onKeyUp={nextPhoto}
         >
