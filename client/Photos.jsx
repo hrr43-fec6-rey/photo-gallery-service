@@ -28,20 +28,18 @@ function Photos({ photos }) {
   const photoList = photos.map((photo, index) => {
     if (index < 9) {
       return (
-        <div
+        <img
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role
           role="button"
           tabIndex="0"
           onClick={handleClick.bind(this, index)}
           onKeyPress={handleClick.bind(this, index)}
-        >
-          <img
-            title="Restaurant, City, State"
-            className={`img ${classList[index]}`}
-            key={photo.id}
-            src={photo.image}
-            alt="Smiley face"
-          />
-        </div>
+          title="Restaurant, City, State"
+          className={`img ${classList[index]}`}
+          key={photo.id}
+          src={photo.image}
+          alt="Smiley face"
+      />
       );
     }
     return null;
@@ -52,9 +50,10 @@ function Photos({ photos }) {
   }
 
   return (
+    <div className="pictures">
     <div className="flex-container">
       {photoList}
-      <div className={`show-picture' + ${(showPicture ? '' : ' hide-picture')}`}>
+      <div className={'show-picture' + (showPicture ? '' : ' hide-picture')}>
         <div
           id="left-arrow"
           className={selectedPicture === 0 ? 'disabled' : ''}
@@ -104,6 +103,7 @@ function Photos({ photos }) {
           x
         </div>
       </div>
+    </div>
     </div>
   );
 }
