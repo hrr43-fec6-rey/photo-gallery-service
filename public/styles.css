@@ -1,9 +1,20 @@
+.pictures {
+  position: relative;
+  width: 100%;
+  padding-top: 46%;
+}
+
 .flex-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 200px;
   align-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
 }
 
 .img {
@@ -13,23 +24,23 @@
 }
 
 .img1 {
-  width: 100px;
-  height: 100px;
+  width: 23%;
+  height: 50%;
 }
 
 .img2 {
-  width: 200px;
-  height: 200px;
+  width: 46%;
+  height: 100%;
 }
 
 .img3 {
-  width: 66.66px;
-  height: 66.66px;
+  width: 15.332%;
+  height: 33.33%;
 }
 
 .img4 {
-  width: 300px;
-  height: 300px;
+  width: 50%;
+  height: 50%;
 }
 
 .circle-image {
@@ -103,6 +114,7 @@ text {
   display: inline-block;
   align-items: flex-start;
   text-align: center;
+  box-sizing: border-box;
   padding: 1px 50px 2px;
 
 }
@@ -130,10 +142,4 @@ text {
   pointer-events: none;
   cursor: default;
   opacity: 0.6;
-}
-
-@media only screen and (max-width: 25em), only screen and (max-width: 40em) and (min-width: 25.0625em) {
-  .flex-container {
-    height: 100%;
-  }
 }
