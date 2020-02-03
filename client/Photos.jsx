@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import '../public/styles.css';
 
 function Photos({ photos }) {
   const [selectedPicture, setSelectedPicture] = useState(0);
@@ -39,7 +40,7 @@ function Photos({ photos }) {
           key={photo.id}
           src={photo.image}
           alt="Smiley face"
-      />
+        />
       );
     }
     return null;
