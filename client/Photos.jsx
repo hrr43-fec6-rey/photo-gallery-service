@@ -64,7 +64,7 @@ function Photos({ photos }) {
           {' '}
             more
         </button>
-        <div className={'show-picture' + (showPicture ? '' : ' hide-picture')}>
+        <div className={`show-picture${showPicture ? '' : ' hide-picture'}`}>
           <div
             id="left-arrow"
             className={selectedPicture === 0 ? 'disabled' : ''}
@@ -91,7 +91,9 @@ function Photos({ photos }) {
                   </strong>
                 </div>
                 <div className="dined-on">
-                  Dined on {photos[selectedPicture].date}
+                  Dined on
+                  {' '}
+                  {photos[selectedPicture].date}
                 </div>
               </div>
             </div>
