@@ -38,6 +38,10 @@ function Photos({ photos }) {
     console.log('flag clicked');
   };
 
+  const closeReport = () => {
+    setShowReport(false);
+  };
+
   const photoList = photos.map((photo, index) => {
     if (index < 9) {
       return (
@@ -92,10 +96,10 @@ function Photos({ photos }) {
               <img className="img4" src={photos[selectedPicture].image} alt="hello" />
               <div className={showReport ? 'show-report' : 'hide-report'}>
                 <h4>  Report a photo problem</h4>
-                <button class="report-button" type="button">Unrelated to restaurant</button>
-                <button class="report-button" type="button">Inappropriate content</button>
-                <button class="report-button" type="button">I don't like this photo</button>
-                <button class="cancel-button" type="button">Cancel</button>
+                <button className="report-button" type="button">Unrelated to restaurant</button>
+                <button className="report-button" type="button">Inappropriate content</button>
+                <button className="report-button" type="button">I don&apos;t like this photo</button>
+                <button onClick={closeReport} id="cancel-button" type="button">Cancel</button>
               </div>
             </div>
             <div className="footer">

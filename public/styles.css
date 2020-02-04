@@ -125,7 +125,7 @@
   border-radius: 3px;
 }
 
-.cancel-button {
+#cancel-button {
   font-size: 16px;
   text-align: center;
   width: 90%;
@@ -139,6 +139,7 @@
   border-color: #fff;
   color: #2b9abf;
   border-width: .05rem;
+  cursor: pointer;
 }
 .footer {
   position: relative;
