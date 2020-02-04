@@ -96,9 +96,9 @@ function Photos({ photos }) {
               <img className="img4" src={photos[selectedPicture].image} alt="hello" />
               <div className={showReport ? 'show-report' : 'hide-report'}>
                 <h4>  Report a photo problem</h4>
-                <button className="report-button" type="button">Unrelated to restaurant</button>
-                <button className="report-button" type="button">Inappropriate content</button>
-                <button className="report-button" type="button">I don&apos;t like this photo</button>
+                <button onClick={closeReport} className="report-button" type="button">Unrelated to restaurant</button>
+                <button onClick={closeReport} className="report-button" type="button">Inappropriate content</button>
+                <button onClick={closeReport} className="report-button" type="button">I don&apos;t like this photo</button>
                 <button onClick={closeReport} id="cancel-button" type="button">Cancel</button>
               </div>
             </div>
