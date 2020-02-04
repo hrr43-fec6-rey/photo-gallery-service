@@ -1,7 +1,11 @@
 const express = require('express');
 
 const app = express();
+const cors = require('cors');
 const db = require('../database/models.js');
+
+
+app.use(cors());
 
 app.use(express.static('./public'));
 

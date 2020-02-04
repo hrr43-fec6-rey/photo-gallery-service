@@ -123,6 +123,7 @@
   padding-bottom: 0.6rem;
   padding-left: 1.75rem;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 #cancel-button {
