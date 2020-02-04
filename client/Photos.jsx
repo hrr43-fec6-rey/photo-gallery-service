@@ -54,6 +54,7 @@ function Photos({ photos }) {
     <div className="pictures">
       <div className="flex-container">
         {photoList}
+        <button className="gallery-more">+{photos.length -9} more</button>
         <div className={'show-picture' + (showPicture ? '' : ' hide-picture')}>
           <div
             id="left-arrow"
