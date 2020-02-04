@@ -54,7 +54,17 @@ function Photos({ photos }) {
     <div className="pictures">
       <div className="flex-container">
         {photoList}
-        <div className={'show-picture' + (showPicture ? '' : ' hide-picture')}>
+        <button
+          type="button"
+          className="gallery-more"
+          onClick={handleClick.bind(this, 8)}
+        >
+            +
+          {photos.length - 9}
+          {' '}
+            more
+        </button>
+        <div className={`show-picture${showPicture ? '' : ' hide-picture'}`}>
           <div
             id="left-arrow"
             className={selectedPicture === 0 ? 'disabled' : ''}
@@ -67,21 +77,23 @@ function Photos({ photos }) {
           </div>
           <div>
             <img className="img4" src={photos[selectedPicture].image} alt="hello" />
-            <div class="footer">
-              <div class="circle-image">
+            <div className="footer">
+              <div className="circle-image">
                 <svg height="50" width="50">
                   <circle cx="25" cy="25" fill="#56D7D9" r="25" />
-                  <text dy="10%" fill="white" font-family="Arial" font-size="15px" text-anchor="middle" x="50%" y="50%">OT</text>
+                  <text dy="10%" fill="white" fontFamily="Arial" fontSize="15px" textAnchor="middle" x="50%" y="50%">OT</text>
                 </svg>
               </div>
-              <div class="diner-text">
+              <div className="diner-text">
                 <div>
                   <strong>
-                  OpenTable Diner
+                    OpenTable Diner
                   </strong>
                 </div>
-                <div class="dined-on">
-                Dined on {photos[selectedPicture].date}
+                <div className="dined-on">
+                  Dined on
+                  {' '}
+                  {photos[selectedPicture].date}
                 </div>
               </div>
             </div>
