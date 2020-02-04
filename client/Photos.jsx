@@ -88,14 +88,16 @@ function Photos({ photos }) {
             &gt;
           </div>
           <div>
-            <img className="img4" src={photos[selectedPicture].image} alt="hello" />
-                <div className={showReport ? 'show-report' : 'hide-report'}>
-                  <h4>Report a photo problem</h4>
-                  <button class="report-button" type="button">Unrelated to restaurant</button>
-                  <button class="report-button" type="button">Inappropriate content</button>
-                  <button class="report-button" type="button">I don't like this photo</button>
-                  <button class="cancel-button" type="button">Cancel</button>
-                </div>
+            <div>
+              <img className="img4" src={photos[selectedPicture].image} alt="hello" />
+              <div className={showReport ? 'show-report' : 'hide-report'}>
+                <h4>  Report a photo problem</h4>
+                <button class="report-button" type="button">Unrelated to restaurant</button>
+                <button class="report-button" type="button">Inappropriate content</button>
+                <button class="report-button" type="button">I don't like this photo</button>
+                <button class="cancel-button" type="button">Cancel</button>
+              </div>
+            </div>
             <div className="footer">
               <div className="footer-text">
                 <div className="circle-image">
@@ -116,8 +118,12 @@ function Photos({ photos }) {
                     {photos[selectedPicture].date}
                   </div>
                 </div>
-                <div className="flag"
-                 onClick={handleFlag}
+                <div
+                  className="flag"
+                  onClick={handleFlag}
+                  onKeyPress={handleFlag}
+                  role="button"
+                  tabIndex="0"
                 >
                   {/* flag found at https://fontawesome.com/license */}
                   <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="flag" className="svg-inline--fa fa-flag fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

@@ -88,15 +88,21 @@
 }
 
 .show-report {
-  position: absolute;
+  position: fixed;
   width: 25rem;
-  height: 20rem;
+  height: 15rem;
   top: 50%;
-  left: 32%;
+  left: 50%;
   background-color: #fff;
   justify-content: center;
+  align-items: center;
   z-index: 1050;
-
+  border-radius: 5px;
+  margin-top: -20px;
+  margin-left: -200px;
+  font-size: 1.25rem;
+  font-family: Arial;
+  text-align: center;
 }
 
 .hide-report {
@@ -110,13 +116,29 @@
   text-align: center;
   border-radius: 3px;
   width: 90%;
-  left: 3px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 0.6rem;
+  padding-right: 1.75rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.75rem;
+  border-radius: 3px;
 }
 
 .cancel-button {
   font-size: 16px;
   text-align: center;
   width: 90%;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 0.6rem;
+  padding-right: 1.75rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.75rem;
+  background-color: #fff;
+  border-color: #fff;
+  color: #2b9abf;
+  border-width: .05rem;
 }
 .footer {
   position: relative;
