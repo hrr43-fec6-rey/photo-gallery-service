@@ -81,7 +81,7 @@ function Photos({ photos }) {
                   </strong>
                 </div>
                 <div class="dined-on">
-                Dined on January 31, 2020
+                Dined on {photos[selectedPicture].date}
                 </div>
               </div>
             </div>
