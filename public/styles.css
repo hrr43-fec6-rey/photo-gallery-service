@@ -63,7 +63,10 @@
   width: 24px;
   height: 24px;
   float: right;
-  padding: 10 0 0 10;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 
@@ -77,19 +80,59 @@
   background-color: rgba(0,0,0,0.86);
   align-items: center;
   justify-content: center;
+  z-index: 9999;
 }
 
 .hide-picture {
   display: none;
 }
 
+.show-report {
+  position: absolute;
+  width: 25rem;
+  height: 20rem;
+  top: 50%;
+  left: 32%;
+  background-color: #fff;
+  justify-content: center;
+  z-index: 1050;
+
+}
+
+.hide-report {
+  display: none;
+}
+
+.report-button {
+  background-color: #61bddb;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 3px;
+  width: 90%;
+  left: 3px;
+}
+
+.cancel-button {
+  font-size: 16px;
+  text-align: center;
+  width: 90%;
+}
 .footer {
+  position: relative;
+  margin: 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.footer-text {
   float: left;
   margin: 0 8px 0 0;
-  bottom: 0;
-  position: fixed;
-  width: 35%;
-  height: 180px;
+  position: absolute;
+  left: -10px;
+  width: 320px;
+
 }
 
 .diner-text {
