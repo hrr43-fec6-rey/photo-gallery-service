@@ -54,7 +54,16 @@ function Photos({ photos }) {
     <div className="pictures">
       <div className="flex-container">
         {photoList}
-        <button className="gallery-more">+{photos.length -9} more</button>
+        <button
+          type="button"
+          className="gallery-more"
+          onClick={handleClick.bind(this, 8)}
+        >
+            +
+          {photos.length - 9}
+          {' '}
+            more
+        </button>
         <div className={'show-picture' + (showPicture ? '' : ' hide-picture')}>
           <div
             id="left-arrow"
@@ -78,11 +87,11 @@ function Photos({ photos }) {
               <div class="diner-text">
                 <div>
                   <strong>
-                  OpenTable Diner
+                    OpenTable Diner
                   </strong>
                 </div>
                 <div class="dined-on">
-                Dined on {photos[selectedPicture].date}
+                  Dined on {photos[selectedPicture].date}
                 </div>
               </div>
             </div>
