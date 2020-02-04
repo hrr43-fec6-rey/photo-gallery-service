@@ -20,7 +20,10 @@ function App() {
 
   return (
     <div>
-      <h1>{photos.length} Photos</h1>
+      <h1>
+        {photos.length}
+        Photos
+      </h1>
       <Photos photos={photos} />
     </div>
   );
