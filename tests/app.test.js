@@ -9,7 +9,12 @@ describe('Test the root path', () => {
     });
   });
   test('It should respond to restaurant_id', () => {
-    return request(app).get('/?id=5').then((response) => {
+    return request(app).get('/?id=1').then((response) => {
+      expect(response.statusCode).toBe(200);
+    });
+  });
+  test('It should respond to restaurant_id', () => {
+    return request(app).get('/?id=100').then((response) => {
       expect(response.statusCode).toBe(200);
     });
   });
