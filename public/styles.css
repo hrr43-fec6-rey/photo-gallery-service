@@ -59,6 +59,13 @@
   float: left;
 }
 
+.flag {
+  width: 24px;
+  height: 24px;
+  float: right;
+  padding: 10 0 0 10;
+}
+
 
 .show-picture {
   display: flex;
