@@ -5,7 +5,7 @@
   "main": "client/index.jsx",
   "scripts": {
     "test": "jest --detectOpenHandles --coverage",
-    "start": "node ./server/indexjs",
+    "start": "node ./server/index.js",
     "start:dev": "nodemon ./server/index.js",
     "build": "webpack --config webpack.config.js --watch",
     "connect": "mysql -u root",
